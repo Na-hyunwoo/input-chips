@@ -8,6 +8,10 @@ input 키워드를 입력받아 chips를 만들어주는 라이브러리가 존�
 
 세상에 제가 만든 라이브러리가 있다는게 기쁩니다. 
 
+## 주소
+
+https://www.npmjs.com/package/input-chips
+
 ## 추가 구현이 필요한 사항
 
 - 사용법
