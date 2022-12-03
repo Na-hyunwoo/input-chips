@@ -14,5 +14,6 @@ https://www.npmjs.com/package/input-chips
 
 ## 추가 구현이 필요한 사항
 
-- 사용법
+- 사용법 (그림과 함께)
 - 확장성
+- 기타 라이센스 등록 등등 

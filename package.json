@@ -1,6 +1,6 @@
 {
   "name": "input-chips",
-  "description": "input with chips",
+  "description": "prettiest input with chips",
   "keywords": ["input", "chips", "react", "component"],
   "version": "0.0.5",
   "private": false,
