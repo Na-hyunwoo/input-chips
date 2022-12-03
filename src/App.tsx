@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import InputWithChips from "./lib/InputWithChips";
 
 function App() {
+
+  const [keywords, setKeywords] = useState<string[]>([]);
+
+  const handleAdd = (keyword: string) => {
+    if (!keywords.includes(keyword)) setKeywords((prev) => [...prev, keyword]);
+  };
+
+  const handleDelete = (keyword: string) => {
+    setKeywords((prev) => prev.filter((existing) => existing !== keyword))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InputWithChips 
+      title={"포함 키워드"}
+      tip={"* 키워드를 한 개씩 작성한 후 Enter를 눌러주세요."}
+      handleDelete={handleDelete}
+      handleAdd={handleAdd}
+      enteredKeywords={keywords}
+      placeholder={"코드"}
+    />
   );
 }
 
