@@ -2,7 +2,7 @@
   "name": "input-chips",
   "description": "input with chips",
   "keywords": ["input", "chips", "react", "component"],
-  "version": "0.0.2",
+  "version": "0.0.5",
   "private": false,
   "main": "dist/lib/InputWithChips.js",
   "types": "dist/lib/InputWithChips.d.ts",

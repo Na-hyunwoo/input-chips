@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Close } from "../assets";
+import Close from "../assets/icons/Close";
 
 interface Props {
   title: string,
@@ -45,7 +45,7 @@ const InputWithChips = (props: Props) => {
         {enteredKeywords.map((keyword, index) => (
           <Chip key={keyword + index} >
             <span>{keyword}</span>
-            <CloseButton onClick={() => handleDelete(keyword)}/>
+            <Close onClick={() => handleDelete(keyword)}/>
           </Chip>
         ))}
       </ChipWrapper>
@@ -72,6 +72,8 @@ const TipText = styled.p`
   font-size: 12px;
   line-height: 12px;
   color: #83879D;
+
+  margin: 0;
 `;
 
 const InputWrapper = styled.div`
@@ -91,6 +93,8 @@ const InputLabel = styled.p`
   font-size: 16px;
   line-height: 26px;
   color: #505467;
+
+  margin: 0;
 `;
 
 const Input = styled.input`
@@ -105,6 +109,8 @@ const Input = styled.input`
   font-size: 16px;
   line-height: 26px;
   color: #3B3F4E;
+
+  border: 0;
 
   &::placeholder {
     color: #C4C9D7;
@@ -160,8 +166,4 @@ const Chip = styled.button`
   &:hover {
     background-color: #F2F7FF;
   }
-`;
-
-const CloseButton = styled(Close)`
-  cursor: pointer;
 `;
