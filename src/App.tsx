@@ -17,9 +17,9 @@ function App() {
     <InputWithChips 
       title={"포함 키워드"}
       tip={"* 키워드를 한 개씩 작성한 후 Enter를 눌러주세요."}
-      handleDelete={handleDelete}
-      handleAdd={handleAdd}
-      enteredKeywords={keywords}
+      onDelete={handleDelete}
+      onAdd={handleAdd}
+      keywords={keywords}
       placeholder={"코드"}
     />
   );
