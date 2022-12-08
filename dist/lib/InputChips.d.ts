@@ -7,5 +7,5 @@ interface Props {
     onAdd: (arg0: string) => void;
     onDelete: (arg0: string) => void;
 }
-declare const InputWithChips: (props: Props) => JSX.Element;
-export default InputWithChips;
+declare const InputChips: (props: Props) => JSX.Element;
+export default InputChips;

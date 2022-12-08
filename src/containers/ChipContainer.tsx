@@ -11,7 +11,7 @@ const ChipContainer = (props: Props) => {
   const { keywords, onDelete } = props;
 
   return (
-    <ChipWrapper>
+    <Wrapper>
       {keywords.map((keyword, index) => (
         <Chip 
           key={keyword + index} 
@@ -19,13 +19,13 @@ const ChipContainer = (props: Props) => {
           onDelete={onDelete}
         />
       ))}
-    </ChipWrapper>
+    </Wrapper>
   )
 }
 
 export default ChipContainer;
 
-const ChipWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

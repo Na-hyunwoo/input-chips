@@ -4,8 +4,8 @@
   "keywords": ["input", "chips", "react", "component"],
   "version": "0.0.7",
   "private": false,
-  "main": "dist/lib/InputWithChips.js",
-  "types": "dist/lib/InputWithChips.d.ts",
+  "main": "dist/lib/InputChips.js",
+  "types": "dist/lib/InputChips.d.ts",
   "browser": "./browser/specific/main.js",
   "author": {
     "name": "Na-hyunwoo",

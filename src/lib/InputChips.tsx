@@ -13,7 +13,7 @@ interface Props {
   onDelete: (arg0: string) => void,
 }
 
-const InputWithChips = (props: Props) => {
+const InputChips = (props: Props) => {
 
   const { title, keywords, placeholder, tip,  onAdd, onDelete } = props;
 
@@ -26,13 +26,12 @@ const InputWithChips = (props: Props) => {
   );
 }
 
-export default InputWithChips;
+export default InputChips;
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
 
   position: relative;

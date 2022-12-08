@@ -65,6 +65,7 @@ const Input = styled.input`
   color: #3B3F4E;
 
   border: 0;
+  outline: 0;
 
   &::placeholder {
     color: #C4C9D7;
