@@ -1,9 +1,6 @@
-import { createContext } from "react";
 import styled from "styled-components";
-import TitleContainer from "../containers/TitleContainer";
-import InputContainer from "../containers/InputContainer";
-import ChipContainer from "../containers/ChipContainer";
-
+import { createContext } from "react";
+import { TitleContainer, ChipContainer, InputContainer } from "../containers";
 interface Props {
   id: string,
   title?: string,
