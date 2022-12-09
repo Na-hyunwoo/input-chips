@@ -1,14 +1,12 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import Chip from "../components/Chip";
+import { Context } from "../lib/InputChips";
 
-interface Props {
-  keywords: string[],
-  onDelete: (arg0: string) => void,
-}
 
-const ChipContainer = (props: Props) => {
+const ChipContainer = () => {
 
-  const { keywords, onDelete } = props;
+  const { keywords } = useContext(Context);
 
   return (
     <Wrapper>
@@ -16,7 +14,6 @@ const ChipContainer = (props: Props) => {
         <Chip 
           key={keyword + index} 
           keyword={keyword} 
-          onDelete={onDelete}
         />
       ))}
     </Wrapper>

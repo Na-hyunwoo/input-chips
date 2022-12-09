@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Close from "../assets/icons/Close";
+import { Context } from "../lib/InputChips";
 
 interface Props {
   keyword: string,
-  onDelete: (arg0: string) => void,
 }
 
 const Chip = (props: Props) => {
 
-  const { keyword, onDelete } = props;
+  const { keyword } = props;
+  const { onDelete } = useContext(Context);
 
   return (
     <Wrapper>

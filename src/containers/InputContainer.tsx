@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import XCircleContainer from "../containers/XCircleContainer";
+import { Context } from "../lib/InputChips";
 
-interface Props {
-  placeholder: string,
-  onAdd: (arg0: string) => void,
-}
+const InputContainer = () => {
 
-const InputContainer = (props: Props) => {
-
-  const { placeholder, onAdd } = props;
+  const { id, placeholder, onAdd, disabled } = useContext(Context);
 
   const [inputValue, setInputValue] = React.useState("");
 
@@ -34,10 +30,12 @@ const InputContainer = (props: Props) => {
       {inputValue.length > 0 &&
         <XCircleContainer onXButton={handleXButton}/>}
       <Input
+        id={id}
         placeholder={placeholder}
         value={inputValue}
         onChange={handleChangeInputValue}
         onKeyDownCapture={handleEnterKeyDown}
+        disabled={disabled}
       />
     </Wrapper>
   )

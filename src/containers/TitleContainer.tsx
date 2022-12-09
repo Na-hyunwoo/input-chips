@@ -1,19 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { Context } from "../lib/InputChips";
 
-interface Props {
-  title: string,
-  tip: string
-}
+const TitleContainer = () => {
 
-const TitleContainer = (props: Props) => {
-
-  const { title, tip } = props;
+  const { id, title, tip } = useContext(Context);
 
   return (
     <Wrapper>
-      <Title>{title}</Title>
-      <Tip>{tip.length > 0 && tip}</Tip>
+      <Title htmlFor={id}>{title ?? ""}</Title>
+      <Tip>{tip ?? ""}</Tip>
     </Wrapper>
   );
 }
@@ -32,7 +28,7 @@ const Wrapper = styled.div`
   gap: 6px;
 `;
 
-const Title = styled.p`
+const Title = styled.label`
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;

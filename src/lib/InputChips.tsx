@@ -1,32 +1,48 @@
-import React from "react";
+import { createContext } from "react";
 import styled from "styled-components";
 import TitleContainer from "../containers/TitleContainer";
 import InputContainer from "../containers/InputContainer";
 import ChipContainer from "../containers/ChipContainer";
 
 interface Props {
-  title: string,
+  id: string,
+  title?: string,
   keywords: Array<string>,
-  placeholder: string,
-  tip: string,
+  placeholder?: string,
+  tip?: string,
   onAdd: (arg0: string) => void,
   onDelete: (arg0: string) => void,
+  disabled?: boolean
 }
 
-const InputChips = (props: Props) => {
+// 여기서 Context API를 쓰면 코드가 더 깔끔해보임. prop-drilling을 방지할 수 있으니까. 
+// compound component pattern
+// 함수만 리턴하게도 사용할 수 있구나. 거기서 발전한게 커스텀 훅 패턴이구나. 
+export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false }: Props) => {
 
-  const { title, keywords, placeholder, tip,  onAdd, onDelete } = props;
+  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled };
 
   return (
-    <Wrapper>
-      <TitleContainer title={title} tip={tip} />
-      <InputContainer placeholder={placeholder} onAdd={onAdd} />
-      <ChipContainer keywords={keywords} onDelete={onDelete}/>
-    </Wrapper>
+    <Context.Provider value={contextValue}>
+      <Wrapper>
+        <TitleContainer />
+        <InputContainer />
+        <ChipContainer />
+      </Wrapper>
+    </Context.Provider>
   );
 }
 
-export default InputChips;
+export const Context = createContext<Props>({
+  id: "",
+  title: "",
+  keywords: [""],
+  placeholder: "",
+  tip: "",
+  onAdd: () => {},
+  onDelete: () => {},
+  disabled: false
+})
 
 const Wrapper = styled.div`
   display: flex;
