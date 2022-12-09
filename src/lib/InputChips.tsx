@@ -15,8 +15,7 @@ interface Props {
   disabled?: boolean
 }
 
-// 여기서 Context API를 쓰면 코드가 더 깔끔해보임. prop-drilling을 방지할 수 있으니까. 
-// compound component pattern
+// compound component pattern을 적용해볼까 ?
 // 함수만 리턴하게도 사용할 수 있구나. 거기서 발전한게 커스텀 훅 패턴이구나. 
 export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false }: Props) => {
 
