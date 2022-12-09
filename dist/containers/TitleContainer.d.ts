@@ -1,7 +1,3 @@
 /// <reference types="react" />
-interface Props {
-    title: string;
-    tip: string;
-}
-declare const TitleContainer: (props: Props) => JSX.Element;
+declare const TitleContainer: () => JSX.Element;
 export default TitleContainer;

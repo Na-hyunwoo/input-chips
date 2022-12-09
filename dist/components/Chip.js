@@ -3,10 +3,13 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     return cooked;
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useContext } from "react";
 import styled from "styled-components";
 import Close from "../assets/icons/Close";
+import { Context } from "../lib/InputChips";
 var Chip = function (props) {
-    var keyword = props.keyword, onDelete = props.onDelete;
+    var keyword = props.keyword;
+    var onDelete = useContext(Context).onDelete;
     return (_jsxs(Wrapper, { children: [_jsx(Keyword, { children: keyword }), _jsx(Close, { onClick: function () { return onDelete(keyword); } })] }));
 };
 export default Chip;

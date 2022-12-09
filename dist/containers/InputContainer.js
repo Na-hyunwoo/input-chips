@@ -3,12 +3,13 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     return cooked;
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import XCircleContainer from "../containers/XCircleContainer";
-var InputContainer = function (props) {
-    var placeholder = props.placeholder, onAdd = props.onAdd;
-    var _a = React.useState(""), inputValue = _a[0], setInputValue = _a[1];
+import { Context } from "../lib/InputChips";
+var InputContainer = function () {
+    var _a = useContext(Context), id = _a.id, placeholder = _a.placeholder, onAdd = _a.onAdd, disabled = _a.disabled;
+    var _b = React.useState(""), inputValue = _b[0], setInputValue = _b[1];
     var handleChangeInputValue = function (e) {
         setInputValue(e.currentTarget.value);
     };
@@ -23,7 +24,7 @@ var InputContainer = function (props) {
         setInputValue("");
     };
     return (_jsxs(Wrapper, { children: [inputValue.length > 0 &&
-                _jsx(XCircleContainer, { onXButton: handleXButton }), _jsx(Input, { placeholder: placeholder, value: inputValue, onChange: handleChangeInputValue, onKeyDownCapture: handleEnterKeyDown })] }));
+                _jsx(XCircleContainer, { onXButton: handleXButton }), _jsx(Input, { id: id, placeholder: placeholder, value: inputValue, onChange: handleChangeInputValue, onKeyDownCapture: handleEnterKeyDown, disabled: disabled })] }));
 };
 export default InputContainer;
 var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: relative;\n\n  width: 100%;\n"], ["\n  position: relative;\n\n  width: 100%;\n"])));
