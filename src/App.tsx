@@ -28,11 +28,11 @@ const App = () => {
   const [ keywords, dispatch ] = useReducer(reducer, []);
 
   const handleAdd = ( keyword: string ) => {
-    dispatch({type: "ADD", keyword: keyword});
+    dispatch({ type: "ADD", keyword: keyword });
   }
 
   const handleDelete = ( keyword: string ) => {
-    dispatch({type: "DELETE", keyword: keyword});
+    dispatch({ type: "DELETE", keyword: keyword });
   }
 
   return (

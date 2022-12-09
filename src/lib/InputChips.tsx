@@ -13,17 +13,24 @@ interface Props {
 }
 
 /**
- * Create an 'Audience component
+ * @param {string} props.id string key for input-label coupling
+ * @param {string} props.title enter your input label
+ * @param {string} props.tip enter tip for using input. It's located next to title. 
+ * @param {string} props.placeholder enter the placeholder showed by input
+ * @param {string[]} props.keywords it will return pretty chips
+ * @param {function props.onAdd(arg0: string) : void} props.onAdd this will send you a keyword, so you should manage it using hook like useState.
+ * @param {function props.onDelete(arg0: string) : void} props.onDeletethis this will send you a keyword, so you should manage it using hook like useState.
+ * @param {boolean} props.disabled true if you want to make disable input
  * @example
  * ```jsx
- * const [ keywords, dispatch ] = useReducer(reducer, []);
+  const [ keywords, dispatch ] = useReducer(reducer, []);
 
   const handleAdd = ( keyword: string ) => {
-    dispatch({type: "ADD", keyword: keyword});
+    dispatch({ type: "ADD", keyword: keyword });
   }
 
   const handleDelete = ( keyword: string ) => {
-    dispatch({type: "DELETE", keyword: keyword});
+    dispatch({ type: "DELETE", keyword: keyword });
   }
 
   return (

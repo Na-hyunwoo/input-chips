@@ -19,6 +19,8 @@ https://www.npmjs.com/package/material-ui-chip-input
 한국어 두 번 입력되는 버그 없애기 
 ![](https://velog.velcdn.com/images/dusdjeks/post/77db6d3b-6be7-4c3c-9ec3-8a0c5b093add/image.gif)
 
+tsdoc, storybook을 통한 dx 향상
+
 ## 주소
 
 https://www.npmjs.com/package/input-chips
