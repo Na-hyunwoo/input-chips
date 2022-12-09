@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
-import XCircleContainer from "../containers/XCircleContainer";
+import { FormEvent, KeyboardEvent, useContext, useState } from "react";
+import { XCircleContainer } from "../containers";
 import { Context } from "../lib/InputChips";
 
 const InputContainer = () => {
 
   const { id, placeholder, onAdd, disabled } = useContext(Context);
 
-  const [inputValue, setInputValue] = React.useState("");
+  const [inputValue, setInputValue] = useState("");
 
-  const handleChangeInputValue = (e: React.FormEvent<HTMLInputElement>) => {
+  const handleChangeInputValue = (e: FormEvent<HTMLInputElement>) => {
     setInputValue(e.currentTarget.value);
   };
 
-  const handleEnterKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleEnterKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && inputValue.length > 0 && e.nativeEvent.isComposing === false) {
       e.preventDefault();
       onAdd(inputValue);

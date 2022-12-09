@@ -12,8 +12,33 @@ interface Props {
   disabled?: boolean
 }
 
-// compound component pattern을 적용해볼까 ?
-// 함수만 리턴하게도 사용할 수 있구나. 거기서 발전한게 커스텀 훅 패턴이구나. 
+/**
+ * Create an 'Audience component
+ * @example
+ * ```jsx
+ * const [ keywords, dispatch ] = useReducer(reducer, []);
+
+  const handleAdd = ( keyword: string ) => {
+    dispatch({type: "ADD", keyword: keyword});
+  }
+
+  const handleDelete = ( keyword: string ) => {
+    dispatch({type: "DELETE", keyword: keyword});
+  }
+
+  return (
+    <InputChips 
+      id={inputChips.title}
+      title={inputChips.title} 
+      tip={inputChips.tip}
+      placeholder={inputChips.placeholder}
+      keywords={keywords}
+      onDelete={handleDelete}
+      onAdd={handleAdd}
+    />
+  );
+ * ```
+ */
 export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false }: Props) => {
 
   const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled };

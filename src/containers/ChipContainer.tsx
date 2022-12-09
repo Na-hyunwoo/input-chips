@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import Chip from "../components/Chip";
+import { useContext } from "react";
+import { Chip } from "../components";
 import { Context } from "../lib/InputChips";
 
 
