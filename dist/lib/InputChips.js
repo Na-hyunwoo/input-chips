@@ -17,8 +17,40 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import styled from "styled-components";
 import { createContext } from "react";
 import { TitleContainer, ChipContainer, InputContainer } from "../containers";
-// compound component pattern을 적용해볼까 ?
-// 함수만 리턴하게도 사용할 수 있구나. 거기서 발전한게 커스텀 훅 패턴이구나. 
+/**
+ * @param {string} props.id string key for input-label coupling
+ * @param {string} props.title enter your input label
+ * @param {string} props.tip enter tip for using input. It's located next to title.
+ * @param {string} props.placeholder enter the placeholder showed by input
+ * @param {string[]} props.keywords it will return pretty chips
+ * @param {function props.onAdd(arg0: string) : void} props.onAdd this will send you a keyword, so you should manage it using hook like useState.
+ * @param {function props.onDelete(arg0: string) : void} props.onDeletethis this will send you a keyword, so you should manage it using hook like useState.
+ * @param {boolean} props.disabled true if you want to make disable input
+ * @example
+ * ```jsx
+  const [ keywords, dispatch ] = useReducer(reducer, []);
+
+  const handleAdd = ( keyword: string ) => {
+    dispatch({ type: "ADD", keyword: keyword });
+  }
+
+  const handleDelete = ( keyword: string ) => {
+    dispatch({ type: "DELETE", keyword: keyword });
+  }
+
+  return (
+    <InputChips
+      id={inputChips.title}
+      title={inputChips.title}
+      tip={inputChips.tip}
+      placeholder={inputChips.placeholder}
+      keywords={keywords}
+      onDelete={handleDelete}
+      onAdd={handleAdd}
+    />
+  );
+ * ```
+ */
 export var InputChips = function (_a) {
     var id = _a.id, title = _a.title, _b = _a.keywords, keywords = _b === void 0 ? [] : _b, placeholder = _a.placeholder, tip = _a.tip, onAdd = _a.onAdd, onDelete = _a.onDelete, _c = _a.disabled, disabled = _c === void 0 ? false : _c;
     var contextValue = { id: id, title: title, keywords: keywords, placeholder: placeholder, tip: tip, onAdd: onAdd, onDelete: onDelete, disabled: disabled };

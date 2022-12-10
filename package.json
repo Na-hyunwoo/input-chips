@@ -1,7 +1,12 @@
 {
   "name": "input-chips",
   "description": "prettiest input with chips",
-  "keywords": ["input", "chips", "react", "component"],
+  "keywords": [
+    "input",
+    "chips",
+    "react",
+    "component"
+  ],
   "version": "0.0.9",
   "private": false,
   "main": "dist/lib/InputChips.js",
@@ -39,12 +44,24 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "rm -rf dist && mkdir dist && tsc"
+    "prepare": "rm -rf dist && mkdir dist && tsc",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -60,6 +77,19 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26"
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "@storybook/node-logger": "^6.5.14",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "prop-types": "^15.8.1",
+    "webpack": "^5.75.0"
   }
 }

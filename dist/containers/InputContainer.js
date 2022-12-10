@@ -3,13 +3,13 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     return cooked;
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React, { useContext } from "react";
 import styled from "styled-components";
-import XCircleContainer from "../containers/XCircleContainer";
+import { useContext, useState } from "react";
+import { XCircleContainer } from "../containers";
 import { Context } from "../lib/InputChips";
 var InputContainer = function () {
     var _a = useContext(Context), id = _a.id, placeholder = _a.placeholder, onAdd = _a.onAdd, disabled = _a.disabled;
-    var _b = React.useState(""), inputValue = _b[0], setInputValue = _b[1];
+    var _b = useState(""), inputValue = _b[0], setInputValue = _b[1];
     var handleChangeInputValue = function (e) {
         setInputValue(e.currentTarget.value);
     };

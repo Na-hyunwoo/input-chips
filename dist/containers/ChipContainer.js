@@ -3,9 +3,9 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     return cooked;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import { useContext } from "react";
 import styled from "styled-components";
-import Chip from "../components/Chip";
+import { useContext } from "react";
+import { Chip } from "../components";
 import { Context } from "../lib/InputChips";
 var ChipContainer = function () {
     var keywords = useContext(Context).keywords;
