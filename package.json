@@ -18,11 +18,13 @@
     "url": "https://github.com/Na-hyunwoo"
   },
   "contributors": [
-    "Na-hyunwoo"
+    {
+      "name": "Na-hyunwoo"
+    }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Na-hyunwoo/input-chips"
+    "url": "git+https://github.com/Na-hyunwoo/input-chips.git"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -46,7 +48,8 @@
     "eject": "react-scripts eject",
     "prepare": "rm -rf dist && mkdir dist && tsc",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=dee058278042"
   },
   "eslintConfig": {
     "extends": [
@@ -89,7 +92,14 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "chromatic": "^6.12.0",
     "prop-types": "^15.8.1",
     "webpack": "^5.75.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Na-hyunwoo/input-chips/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/Na-hyunwoo/input-chips#readme",
+  "_id": "input-chips@0.1.0"
 }
