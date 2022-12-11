@@ -18,9 +18,9 @@ const reducer = (state: string[], action: ActionProps) : string[] => {
 }
 
 const inputChips = {
-  title: "포함 키워드",
-  tip: "키워드를 한 개씩 작성한 후 Enter를 눌러주세요.",
-  placeholder: "코드",
+  title: "Include Keywords",
+  tip: "After entering the keywords one by one, press Enter.",
+  placeholder: "내가 만든 쿠키 너를 위해 구웠지",
 }
 
 const App = () => {
