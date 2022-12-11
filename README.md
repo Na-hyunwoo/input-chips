@@ -14,12 +14,12 @@ input에 따른 chips 기능을 제품에 실으려고 여러가지 기능을 �
 불편했던 라이브러리
 https://www.npmjs.com/package/material-ui-chip-input
 ## 중점을 둔 점
-예쁜 UI 
+- 예쁜 UI 
 
-한국어 두 번 입력되는 버그 없애기 
+- 한국어 두 번 입력되는 버그 없애기 
 ![](https://velog.velcdn.com/images/dusdjeks/post/77db6d3b-6be7-4c3c-9ec3-8a0c5b093add/image.gif)
 
-tsdoc, storybook을 통한 dx 향상
+- tsdoc, storybook을 통한 dx 향상
 
 ## 주소
 
