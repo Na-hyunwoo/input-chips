@@ -8,7 +8,7 @@ import { useContext, useState } from "react";
 import { XCircleContainer } from "../containers";
 import { Context } from "../lib/InputChips";
 var InputContainer = function () {
-    var _a = useContext(Context), id = _a.id, placeholder = _a.placeholder, onAdd = _a.onAdd, disabled = _a.disabled;
+    var _a = useContext(Context), id = _a.id, placeholder = _a.placeholder, onAdd = _a.onAdd, disabled = _a.disabled, autoFocus = _a.autoFocus, maxLength = _a.maxLength, minLength = _a.minLength, name = _a.name, readonly = _a.readonly, required = _a.required;
     var _b = useState(""), inputValue = _b[0], setInputValue = _b[1];
     var handleChangeInputValue = function (e) {
         setInputValue(e.currentTarget.value);
@@ -24,7 +24,7 @@ var InputContainer = function () {
         setInputValue("");
     };
     return (_jsxs(Wrapper, { children: [inputValue.length > 0 &&
-                _jsx(XCircleContainer, { onXButton: handleXButton }), _jsx(Input, { id: id, placeholder: placeholder, value: inputValue, onChange: handleChangeInputValue, onKeyDownCapture: handleEnterKeyDown, disabled: disabled })] }));
+                _jsx(XCircleContainer, { onXButton: handleXButton }), _jsx(Input, { id: id, placeholder: placeholder, value: inputValue, onChange: handleChangeInputValue, onKeyDownCapture: handleEnterKeyDown, disabled: disabled, autoFocus: autoFocus, maxLength: maxLength, minLength: minLength, name: name, readOnly: readonly, required: required })] }));
 };
 export default InputContainer;
 var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: relative;\n\n  width: 100%;\n"], ["\n  position: relative;\n\n  width: 100%;\n"])));

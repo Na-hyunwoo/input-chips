@@ -8,6 +8,12 @@ interface Props {
     onAdd: (arg0: string) => void;
     onDelete: (arg0: string) => void;
     disabled?: boolean;
+    autoFocus?: boolean;
+    maxLength?: number;
+    minLength?: number;
+    name?: string;
+    readonly?: boolean;
+    required?: boolean;
 }
 /**
  * @param {string} props.id string key for input-label coupling
@@ -18,6 +24,12 @@ interface Props {
  * @param {function props.onAdd(arg0: string) : void} props.onAdd this will send you a keyword, so you should manage it using hook like useState.
  * @param {function props.onDelete(arg0: string) : void} props.onDeletethis this will send you a keyword, so you should manage it using hook like useState.
  * @param {boolean} props.disabled true if you want to make disable input
+ * @param {boolean} props.autoFocus
+ * @param {number} props.maxLength
+ * @param {number} props.minLength
+ * @param {string} props.name
+ * @param {boolean} props.readonly
+ * @param {boolean} props.required
  * @example
  * ```jsx
   const [ keywords, dispatch ] = useReducer(reducer, []);
@@ -43,6 +55,6 @@ interface Props {
   );
  * ```
  */
-export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled }: Props) => JSX.Element;
+export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required }: Props) => JSX.Element;
 export declare const Context: import("react").Context<Props>;
 export {};

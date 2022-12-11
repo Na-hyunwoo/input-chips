@@ -19,7 +19,7 @@ import styled from "styled-components";
 import { Context } from "../lib/InputChips";
 var TitleContainer = function () {
     var _a = useContext(Context), id = _a.id, title = _a.title, tip = _a.tip;
-    return (_jsxs(Wrapper, { children: [_jsx(Title, __assign({ htmlFor: id }, { children: title !== null && title !== void 0 ? title : "" })), _jsx(Tip, { children: tip !== null && tip !== void 0 ? tip : "" })] }));
+    return (_jsxs(Wrapper, { children: [_jsx(Title, __assign({ htmlFor: id }, { children: title !== null && title !== void 0 ? title : "" })), _jsx(Tip, { children: tip ? "\u203B ".concat(tip) : "" })] }));
 };
 export default TitleContainer;
 var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n\n  width: 100%;\n  justify-content: flex-start;\n  display: flex;\n  gap: 6px;\n"], ["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n\n  width: 100%;\n  justify-content: flex-start;\n  display: flex;\n  gap: 6px;\n"])));
