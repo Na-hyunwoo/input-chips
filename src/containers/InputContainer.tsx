@@ -5,7 +5,7 @@ import { Context } from "../lib/InputChips";
 
 const InputContainer = () => {
 
-  const { id, placeholder, onAdd, disabled } = useContext(Context);
+  const { id, placeholder, onAdd, disabled, autoFocus, maxLength, minLength, name, readonly, required } = useContext(Context);
 
   const [inputValue, setInputValue] = useState("");
 
@@ -36,6 +36,12 @@ const InputContainer = () => {
         onChange={handleChangeInputValue}
         onKeyDownCapture={handleEnterKeyDown}
         disabled={disabled}
+        autoFocus={autoFocus}
+        maxLength={maxLength}
+        minLength={minLength}
+        name={name}
+        readOnly={readonly}
+        required={required}
       />
     </Wrapper>
   )

@@ -10,6 +10,12 @@ interface Props {
   onAdd: (arg0: string) => void,
   onDelete: (arg0: string) => void,
   disabled?: boolean
+  autoFocus?: boolean, 
+  maxLength?: number, 
+  minLength?: number, 
+  name?: string, 
+  readonly?: boolean, 
+  required?: boolean
 }
 
 /**
@@ -21,6 +27,12 @@ interface Props {
  * @param {function props.onAdd(arg0: string) : void} props.onAdd this will send you a keyword, so you should manage it using hook like useState.
  * @param {function props.onDelete(arg0: string) : void} props.onDeletethis this will send you a keyword, so you should manage it using hook like useState.
  * @param {boolean} props.disabled true if you want to make disable input
+ * @param {boolean} props.autoFocus
+ * @param {number} props.maxLength
+ * @param {number} props.minLength
+ * @param {string} props.name
+ * @param {boolean} props.readonly 
+ * @param {boolean} props.required
  * @example
  * ```jsx
   const [ keywords, dispatch ] = useReducer(reducer, []);
@@ -46,9 +58,9 @@ interface Props {
   );
  * ```
  */
-export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false }: Props) => {
+export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, autoFocus, maxLength, minLength, name, readonly, required }: Props) => {
 
-  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled };
+  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required };
 
   return (
     <Context.Provider value={contextValue}>
