@@ -14,21 +14,16 @@ input에 따른 chips 기능을 제품에 실으려고 여러가지 기능을 �
 불편했던 라이브러리
 https://www.npmjs.com/package/material-ui-chip-input
 ## 중점을 둔 점
-예쁜 UI 
+- 예쁜 UI 
 
-한국어 두 번 입력되는 버그 없애기 
+- 한국어 두 번 입력되는 버그 없애기 
 ![](https://velog.velcdn.com/images/dusdjeks/post/77db6d3b-6be7-4c3c-9ec3-8a0c5b093add/image.gif)
 
-tsdoc, storybook을 통한 dx 향상
+- tsdoc, storybook을 통한 dx 향상
 
 ## 주소
 
 https://www.npmjs.com/package/input-chips
-
-## 추가 구현이 필요한 사항
-
-- 확장성
-- 기타 라이센스 등록 등등 
 
 ## 사용법
 
@@ -93,3 +88,8 @@ export default App;
 - 이 프로젝트를 진행하면서 material-ui-input-chip이라는 라이브러리를 아주 깊이있게 이해하게 되었고, 의문들을 issue에 올리면서 만든 사람의 입장을 이해하려 노력했다. 추가적으로 이걸 사용하려는 사람의 생각도 이해하려 노력했다. 따라서, 다음에 만들 라이브러리에서는 시행착오를 조금은 줄일 수 있겠다고 생각하게 되었다. 
 - 뿐만 아니라, 나만의 라이브러리를 배포하는 방법을 알게 되었고, form, input 과 같은 기본적인 html 태그에 대해서 몰랐던 부분을 개선할 수 있었다. 그리고 내가 기존에 하던 props 네이밍에 대한 개선점을 찾을 수 있었다.  
 - 그리고 컴포넌트 설계 패턴에 대해서 다시 학습하면서 compound component pattern, custom hook pattern, state reducer pattern에 대해서 다시 학습하고 적용하는 시간을 가질 수 있었다. 
+
+## 추가 구현이 필요한 사항
+
+- 확장성
+- 기타 라이센스 등록 등등 
