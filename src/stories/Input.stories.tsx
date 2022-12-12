@@ -18,7 +18,7 @@ const Template = (args: Props) => <InputContainer {...args}/>;
 export const InputWithPlaceholder = Template.bind({});
 InputWithPlaceholder.args = {
   id: InputWithPlaceholder,
-  placeholder: "Frozen pasta cooked in just 5 minutes",
+  placeholder: "Cookies I made and baked for you",
 }
 
 export const DisabledInput = Template.bind({});

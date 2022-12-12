@@ -7,7 +7,7 @@ But this package is deprecated, and I wanted a different design.
 
 I thought the form with chips inside the input was inappropriate and it was strange that the position of the placeholder kept changing.
 
-If you want to try the component yourself instead of watching a gif, head over to the storybook for a live demo !
+If you want to try the component yourself instead of watching a gif, head over to the [storybook](https://63961733d24ff60abfa4c861-lfrqimfugu.chromatic.com/?path=/story/inputchips--input-chips-with-title) for a live demo !
 
 ## Installation
 
