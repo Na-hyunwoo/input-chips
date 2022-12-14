@@ -3,9 +3,26 @@ import { FormEvent, KeyboardEvent, useContext, useState } from "react";
 import { XCircleContainer } from "../containers";
 import { Context } from "../lib/InputChips";
 
+interface InputProps {
+  id: string,
+  placeholder?: string,
+  value: string,
+  onChange(arg0: FormEvent<HTMLInputElement>): void,
+  onKeyDownCapture(arg0: KeyboardEvent<HTMLInputElement>): void,
+  disabled?: boolean,
+  autoFocus?: boolean,
+  maxLength?: number,
+  minLength?: number, 
+  name?: string,
+  readOnly?: boolean, 
+  required?: boolean,
+  background?: string,
+  border?: string,
+}
+
 const InputContainer = () => {
 
-  const { id, placeholder, onAdd, disabled, autoFocus, maxLength, minLength, name, readonly, required } = useContext(Context);
+  const { id, placeholder, onAdd, disabled, autoFocus, maxLength, minLength, name, readonly, required, background, border } = useContext(Context);
 
   const [inputValue, setInputValue] = useState("");
 
@@ -42,6 +59,8 @@ const InputContainer = () => {
         name={name}
         readOnly={readonly}
         required={required}
+        background={background}
+        border={border}
       />
     </Wrapper>
   )
@@ -54,9 +73,9 @@ const Wrapper = styled.div`
 
   width: 100%;
 `;
-
-const Input = styled.input`
-  background: #F2F7FF;
+ 
+const Input = styled.input<InputProps>`
+  background: ${({background}) => background};
 
   border-radius: 8px;
   width: 100%;
@@ -77,7 +96,7 @@ const Input = styled.input`
 
   &:focus {
     padding: 7px 15px;
-    border: 1px solid #3784F6;
+    border: ${({border}) => `1px solid ${border}`};
   }
 `;
 

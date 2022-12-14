@@ -15,7 +15,9 @@ interface Props {
   minLength?: number, 
   name?: string, 
   readonly?: boolean, 
-  required?: boolean
+  required?: boolean,
+  background?: string,
+  border?: string,
 }
 
 /**
@@ -33,6 +35,8 @@ interface Props {
  * @param {string} props.name
  * @param {boolean} props.readonly 
  * @param {boolean} props.required
+ * @param {string} props.background
+ * @param {string} props.border
  * @example
  * ```jsx
   const [ keywords, dispatch ] = useReducer(reducer, []);
@@ -58,9 +62,9 @@ interface Props {
   );
  * ```
  */
-export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, autoFocus, maxLength, minLength, name, readonly, required }: Props) => {
+export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, autoFocus, maxLength, minLength, name, readonly, required, background, border }: Props) => {
 
-  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required };
+  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required, background, border };
 
   return (
     <Context.Provider value={contextValue}>
@@ -81,7 +85,9 @@ export const Context = createContext<Props>({
   tip: "",
   onAdd: () => {},
   onDelete: () => {},
-  disabled: false
+  disabled: false,
+  background: `#F2F7FF`,
+  border: `#3784F6`,
 })
 
 const Wrapper = styled.div`

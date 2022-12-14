@@ -10,10 +10,10 @@ interface Props {
 const Chip = (props: Props) => {
 
   const { keyword } = props;
-  const { onDelete } = useContext(Context);
+  const { onDelete, background } = useContext(Context);
 
   return (
-    <Wrapper>
+    <Wrapper background={background}>
       <Keyword>{keyword}</Keyword>
       <Close onClick={() => onDelete(keyword)}/>
     </Wrapper>
@@ -22,7 +22,7 @@ const Chip = (props: Props) => {
 
 export default Chip;
 
-const Wrapper = styled.button`
+const Wrapper = styled.button<{ background?: string }>`
   display: flex;
   align-items: center;
 
@@ -39,7 +39,7 @@ const Wrapper = styled.button`
   white-space: nowrap;
 
   &:hover {
-    background-color: #F2F7FF;
+    background-color: ${({background}) => background};
   }
 `;
 
