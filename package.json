@@ -99,7 +99,7 @@
   "bugs": {
     "url": "https://github.com/Na-hyunwoo/input-chips/issues"
   },
-  "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/Na-hyunwoo/input-chips#readme",
+  "readme": "https://github.com/Na-hyunwoo/input-chips#readme",
+  "homepage": ".",
   "_id": "input-chips@0.1.0"
 }
