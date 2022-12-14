@@ -58,6 +58,8 @@ interface Props {
       keywords={keywords}
       onDelete={handleDelete}
       onAdd={handleAdd}
+      border={`#987543`}
+      background={`#957482`}
     />
   );
  * ```

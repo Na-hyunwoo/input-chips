@@ -79,17 +79,19 @@ export default App;
 ## Properties
 |Name|Type|Default|Description|
 |---|---|---|---|
-|id|`string`||string key for input-label coupling
-|title|`string`||enter your input label
-|tip|`string`||enter tip for using input. It's located next to title.
-|placeholder|`string`||enter the placeholder showed by input
-|keywords|`string[]`||it will return pretty chips
-|onAdd|`function(arg0: string)`||this will send you a keyword, so you should manage it using hook like useState.
-|onDelete|`function(arg0: string)`||this will send you a keyword, so you should manage it using hook like useState.
-|disabled|`boolean`||true if you want to make disable input
+|id|`string`||String key for input-label coupling
+|title|`string`||Enter your input label
+|tip|`string`||Enter tip for using input. It's located next to title.
+|placeholder|`string`||Enter the placeholder showed by input
+|keywords|`string[]`||It will return pretty chips
+|onAdd|`function(arg0: string)`||This will send you a keyword, so you should manage it using hook like useState.
+|onDelete|`function(arg0: string)`||This will send you a keyword, so you should manage it using hook like useState.
+|disabled|`boolean`||True if you want to make disable input
 |autoFocus|`bool`||A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading
 |maxLength|`number`||It defines the maximum number of characters
 |minLength|`number`||It defines the minimum number of characters
 |name|`string`||A string specifying a name for the input control.
 |readonly|`boolean`||A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input.
-|required|`boolean`||required is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
+|required|`boolean`||Required is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
+|border|`string`||You can customize your input border. 
+|background|`string`||You can customize your input background and chip background. 

@@ -14,6 +14,8 @@ interface Props {
     name?: string;
     readonly?: boolean;
     required?: boolean;
+    background?: string;
+    border?: string;
 }
 /**
  * @param {string} props.id string key for input-label coupling
@@ -30,6 +32,8 @@ interface Props {
  * @param {string} props.name
  * @param {boolean} props.readonly
  * @param {boolean} props.required
+ * @param {string} props.background
+ * @param {string} props.border
  * @example
  * ```jsx
   const [ keywords, dispatch ] = useReducer(reducer, []);
@@ -55,6 +59,6 @@ interface Props {
   );
  * ```
  */
-export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required }: Props) => JSX.Element;
+export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required, background, border }: Props) => JSX.Element;
 export declare const Context: import("react").Context<Props>;
 export {};
