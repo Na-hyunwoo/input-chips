@@ -55,6 +55,8 @@ import { TitleContainer, ChipContainer, InputContainer } from "../containers";
       keywords={keywords}
       onDelete={handleDelete}
       onAdd={handleAdd}
+      border={`#987543`}
+      background={`#957482`}
     />
   );
  * ```
