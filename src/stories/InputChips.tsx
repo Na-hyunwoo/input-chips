@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import Title from "./Title";
 import ChipGroup from "./ChipGroup";
 import Input from "./Input";
+import { Wrapper } from "../lib/InputChips/styled";
 
-interface Props {
-  id?: string,
+export interface Props {
+  id: string,
   title?: string,
   keywords: Array<string>,
   placeholder?: string,
@@ -37,16 +37,5 @@ export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, 
     </Wrapper>
   );
 }
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  position: relative;
-  gap: 16px;
-  width: 100%;
-`;
 
 

@@ -1,18 +1,13 @@
 import React from "react"
 import Title from "./Title";
-
-interface Props {
-  id?: string,
-  title?: string,
-  tip?: string,
-}
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
   title: "Title",
   component: Title
-}
+} as ComponentMeta<typeof Title>
 
-const Template = (args: Props) => <Title {...args} />;
+const Template: ComponentStory<typeof Title> = (args) => <Title {...args} />;
 
 export const OnlyTitle = Template.bind({});
 OnlyTitle.args = {

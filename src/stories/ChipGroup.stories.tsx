@@ -1,22 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 import ChipGroup from "./ChipGroup";
-
-interface Props {
-  keywords: string[],
-}
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   title: "ChipGroup",
   component: ChipGroup
-}
+} as ComponentMeta<typeof ChipGroup>
 
-const Template = (args: Props) => <ChipGroup {...args}/>;
+const Template: ComponentStory<typeof ChipGroup> =  (args) => <ChipGroup {...args}/>;
   
 export const MultiChips = Template.bind({});
 MultiChips.args = {
   keywords: ["Chip1", "Chip2", "Chip3"]
 };
+
 
 
 

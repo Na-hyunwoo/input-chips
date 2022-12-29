@@ -1,23 +1,11 @@
 import React, { useState } from "react";
 import { InputChips } from "./InputChips";
-
-interface Props {
-  id: string,
-  title?: string,
-  keywords: Array<string>,
-  placeholder?: string,
-  tip?: string,
-  onAdd: (arg0: string) => void,
-  onDelete: (arg0: string) => void,
-  disabled?: boolean
-}
+import { ComponentMeta } from "@storybook/react";
 
 export default {
   title: "InputChips",
   component: InputChips
-}
-
-const Template = (args: Props) => <InputChips {...args}/>;
+} as ComponentMeta<typeof InputChips>
 
 export const InputChipsWithTitle = () => {
 
@@ -114,6 +102,7 @@ export const NormalInputChips = () => {
 
   return (
     <InputChips 
+      id={"Enter Keyword"}
       keywords={keywords}
       onAdd={handleAdd}
       onDelete={handleDelete}

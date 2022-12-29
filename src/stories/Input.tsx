@@ -1,9 +1,9 @@
 import React, { FormEvent, KeyboardEvent, useState } from "react";
-import styled from "styled-components";
 import { XCircleContainer } from "../containers";
+import { Wrapper, Input } from "../containers/InputContainer/styled";
 
-interface Props {
-  id?: string,
+export interface Props {
+  id: string,
   placeholder?: string,
   onAdd: (arg0: string) => void,
   disabled?: boolean,
@@ -46,36 +46,4 @@ const InputContainer = ({ id, placeholder, onAdd, disabled }: Props) => {
 }
 
 export default InputContainer;
-
-const Wrapper = styled.div`
-  position: relative;
-
-  width: 100%;
-`;
-
-const Input = styled.input`
-  background: #F2F7FF;
-
-  border-radius: 8px;
-  width: calc(100% - 32px);
-  resize: none;
-  padding: 8px 16px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-  color: #3B3F4E;
-
-  border: 0;
-  outline: 0;
-
-  &::placeholder {
-    color: #C4C9D7;
-  }
-
-  &:focus {
-    padding: 7px 15px;
-    border: 1px solid #3784F6;
-  }
-`;
 

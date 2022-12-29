@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import Chip from "./Chip";
+import { Wrapper } from "../containers/ChipContainer/styled";
 
-interface Props {
+export interface Props {
   keywords: string[]
   onDelete: (arg0: string) => void,
 }
@@ -22,18 +22,5 @@ const ChipGroup = ({ keywords, onDelete }: Props) => {
 }
 
 export default ChipGroup;
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 12px 4px;
-  margin-top: 4px;
-`;
 
 
