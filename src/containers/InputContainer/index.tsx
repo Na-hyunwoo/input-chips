@@ -1,6 +1,6 @@
 import { FormEvent, KeyboardEvent, useContext, useState } from "react";
 import { XCircleContainer } from "..";
-import { ContextValue } from "../../lib/InputChips";
+import { Context } from "../../lib/InputChips";
 import { Wrapper, Input } from "./styled";
 
 const InputContainer = () => {
@@ -16,7 +16,7 @@ const InputContainer = () => {
     required,
     background,
     border,
-  } = useContext(ContextValue);
+  } = useContext(Context);
 
   const [inputValue, setInputValue] = useState("");
 

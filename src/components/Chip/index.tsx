@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Close from "../../assets/icons/Close";
-import { ContextValue } from "../../lib/InputChips";
+import { Context } from "../../lib/InputChips";
 import { Wrapper, Keyword } from "./styled";
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const Chip = ({ keyword }: Props) => {
-  const { onDelete, background } = useContext(ContextValue);
+  const { onDelete, background } = useContext(Context);
 
   return (
     <Wrapper background={background}>

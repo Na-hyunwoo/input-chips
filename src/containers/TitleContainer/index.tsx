@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { ContextValue } from "../../lib/InputChips";
+import { Context } from "../../lib/InputChips";
 import { Wrapper, Title, Tip } from "./styled";
 
 const TitleContainer = () => {
-  const { id, title, tip } = useContext(ContextValue);
+  const { id, title, tip } = useContext(Context);
 
   return (
     <Wrapper>
