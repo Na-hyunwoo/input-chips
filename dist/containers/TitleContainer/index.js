@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useContext } from "react";
-import { Context } from "../../InputChips";
+import { Context } from "../../InputChips/context";
 import { Wrapper, Title, Tip } from "./styled";
 var TitleContainer = function () {
     var _a = useContext(Context), id = _a.id, title = _a.title, tip = _a.tip;

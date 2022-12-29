@@ -1,4 +1,3 @@
-import { createContext } from "react";
 import {
   TitleContainer,
   ChipContainer,
@@ -6,19 +5,7 @@ import {
 } from "../containers";
 import { Wrapper } from "./styled";
 import { Props } from "./type";
-
-export const Context = createContext<Props>({
-  id: "",
-  title: "",
-  keywords: [""],
-  placeholder: "",
-  tip: "",
-  onAdd: () => {},
-  onDelete: () => {},
-  disabled: false,
-  background: "",
-  border: "",
-});
+import { Context } from "./context";
 
 /**
  * @param {string} props.id string key for input-label coupling
@@ -109,4 +96,4 @@ export const InputChips = ({
   );
 };
 
-
+export default InputChips;

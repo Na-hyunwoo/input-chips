@@ -1,6 +1,5 @@
 /// <reference types="react" />
 import { Props } from "./type";
-export declare const Context: import("react").Context<Props>;
 /**
  * @param {string} props.id string key for input-label coupling
  * @param {string} props.title enter your input label
@@ -45,3 +44,4 @@ export declare const Context: import("react").Context<Props>;
  * ```
  */
 export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, maxLength, minLength, name, readonly, required, background, border, }: Props) => JSX.Element;
+export default InputChips;

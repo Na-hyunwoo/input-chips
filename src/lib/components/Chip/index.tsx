@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Close from "../../assets/icons/Close";
-import { Context } from "../../InputChips";
+import { Context } from "../../InputChips/context";
 import { Wrapper, Keyword } from "./styled";
 
 export interface Props {

@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useContext, useState } from "react";
 import { XCircleContainer } from "..";
-import { Context } from "../../InputChips";
+import { Context } from "../../InputChips/context";
 import { Wrapper, Input } from "./styled";
 var InputContainer = function () {
     var _a = useContext(Context), id = _a.id, placeholder = _a.placeholder, onAdd = _a.onAdd, disabled = _a.disabled, maxLength = _a.maxLength, minLength = _a.minLength, name = _a.name, readonly = _a.readonly, required = _a.required, background = _a.background, border = _a.border;

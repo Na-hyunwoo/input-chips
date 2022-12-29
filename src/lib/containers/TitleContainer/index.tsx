@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Context } from "../../InputChips";
+import { Context } from "../../InputChips/context";
 import { Wrapper, Title, Tip } from "./styled";
 
 const TitleContainer = () => {

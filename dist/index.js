@@ -1,1 +1,1 @@
-export { InputChips } from "./InputChips";
+export { default as InputChips } from "./InputChips";

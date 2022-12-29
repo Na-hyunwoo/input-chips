@@ -12,7 +12,7 @@ var __assign = (this && this.__assign) || function () {
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useContext } from "react";
 import Close from "../../assets/icons/Close";
-import { Context } from "../../InputChips";
+import { Context } from "../../InputChips/context";
 import { Wrapper, Keyword } from "./styled";
 var Chip = function (_a) {
     var keyword = _a.keyword;

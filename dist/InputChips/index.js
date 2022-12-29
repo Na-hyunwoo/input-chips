@@ -10,21 +10,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { createContext } from "react";
 import { TitleContainer, ChipContainer, InputContainer, } from "../containers";
 import { Wrapper } from "./styled";
-export var Context = createContext({
-    id: "",
-    title: "",
-    keywords: [""],
-    placeholder: "",
-    tip: "",
-    onAdd: function () { },
-    onDelete: function () { },
-    disabled: false,
-    background: "",
-    border: "",
-});
+import { Context } from "./context";
 /**
  * @param {string} props.id string key for input-label coupling
  * @param {string} props.title enter your input label
@@ -89,3 +77,4 @@ export var InputChips = function (_a) {
     };
     return (_jsx(Context.Provider, __assign({ value: contextValue }, { children: _jsxs(Wrapper, { children: [_jsx(TitleContainer, {}), _jsx(InputContainer, {}), _jsx(ChipContainer, {})] }) })));
 };
+export default InputChips;

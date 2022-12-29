@@ -7,10 +7,10 @@
     "react",
     "component"
   ],
-  "version": "0.1.6",
+  "version": "0.1.9",
   "private": false,
-  "main": "dist/lib/InputChips.js",
-  "types": "dist/lib/InputChips.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "browser": "./browser/specific/main.js",
   "author": {
     "name": "Na-hyunwoo",
