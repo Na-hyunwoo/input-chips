@@ -4,51 +4,48 @@ import { ComponentMeta } from "@storybook/react";
 
 export default {
   title: "InputChips",
-  component: InputChips
-} as ComponentMeta<typeof InputChips>
+  component: InputChips,
+} as ComponentMeta<typeof InputChips>;
 
 export const InputChipsWithTitle = () => {
-
   const [keywords, setKeywords] = useState<string[]>([]);
 
   const handleAdd = (keyword: string) => {
-    if(!keywords.includes(keyword)) {
+    if (!keywords.includes(keyword)) {
       setKeywords((prev) => [...prev, keyword]);
     }
-  }
+  };
 
   const handleDelete = (keyword: string) => {
     setKeywords((prev) => prev.filter((value) => value !== keyword));
-  }
+  };
 
   return (
-    <InputChips 
+    <InputChips
       id={"Enter Keyword"}
       title={"Enter Keyword"}
       keywords={keywords}
       onAdd={handleAdd}
       onDelete={handleDelete}
     />
-  )
-}
-
+  );
+};
 
 export const InputChipsWithTip = () => {
-
   const [keywords, setKeywords] = useState<string[]>([]);
 
   const handleAdd = (keyword: string) => {
-    if(!keywords.includes(keyword)) {
+    if (!keywords.includes(keyword)) {
       setKeywords((prev) => [...prev, keyword]);
     }
-  }
+  };
 
   const handleDelete = (keyword: string) => {
     setKeywords((prev) => prev.filter((value) => value !== keyword));
-  }
+  };
 
   return (
-    <InputChips 
+    <InputChips
       id={"Enter Keyword"}
       title={"Enter Keyword"}
       tip={"After writing keywords one by one, press Enter."}
@@ -56,25 +53,24 @@ export const InputChipsWithTip = () => {
       onAdd={handleAdd}
       onDelete={handleDelete}
     />
-  )
-}
+  );
+};
 
 export const InputChipsWithPlaceholder = () => {
-
   const [keywords, setKeywords] = useState<string[]>([]);
 
   const handleAdd = (keyword: string) => {
-    if(!keywords.includes(keyword)) {
+    if (!keywords.includes(keyword)) {
       setKeywords((prev) => [...prev, keyword]);
     }
-  }
+  };
 
   const handleDelete = (keyword: string) => {
     setKeywords((prev) => prev.filter((value) => value !== keyword));
-  }
+  };
 
   return (
-    <InputChips 
+    <InputChips
       id={"Enter Keyword"}
       title={"Enter Keyword"}
       tip={"After writing keywords one by one, press Enter."}
@@ -83,29 +79,28 @@ export const InputChipsWithPlaceholder = () => {
       onAdd={handleAdd}
       onDelete={handleDelete}
     />
-  )
-}
+  );
+};
 
 export const NormalInputChips = () => {
-
   const [keywords, setKeywords] = useState<string[]>([]);
 
   const handleAdd = (keyword: string) => {
-    if(!keywords.includes(keyword)) {
+    if (!keywords.includes(keyword)) {
       setKeywords((prev) => [...prev, keyword]);
     }
-  }
+  };
 
   const handleDelete = (keyword: string) => {
     setKeywords((prev) => prev.filter((value) => value !== keyword));
-  }
+  };
 
   return (
-    <InputChips 
+    <InputChips
       id={"Enter Keyword"}
       keywords={keywords}
       onAdd={handleAdd}
       onDelete={handleDelete}
     />
-  )
-}
+  );
+};

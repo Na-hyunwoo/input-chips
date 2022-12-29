@@ -14,7 +14,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "airbnb-typescript",
     "airbnb/hooks",
-    "prettier"
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -29,5 +29,5 @@ module.exports = {
   rules: {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-  }
-}
+  },
+};

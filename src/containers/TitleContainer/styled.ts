@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +25,7 @@ export const Tip = styled.p`
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
-  color: #83879D;
+  color: #83879d;
 
   margin: 0;
 `;

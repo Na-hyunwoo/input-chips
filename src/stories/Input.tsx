@@ -3,14 +3,13 @@ import { XCircleContainer } from "../containers";
 import { Wrapper, Input } from "../containers/InputContainer/styled";
 
 export interface Props {
-  id: string,
-  placeholder?: string,
-  onAdd: (arg0: string) => void,
-  disabled?: boolean,
+  id: string;
+  placeholder?: string;
+  onAdd: (arg0: string) => void;
+  disabled?: boolean;
 }
 
 const InputContainer = ({ id, placeholder, onAdd, disabled }: Props) => {
-
   const [inputValue, setInputValue] = useState("");
 
   const handleChangeInputValue = (e: FormEvent<HTMLInputElement>) => {
@@ -18,7 +17,11 @@ const InputContainer = ({ id, placeholder, onAdd, disabled }: Props) => {
   };
 
   const handleEnterKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && inputValue.length > 0 && e.nativeEvent.isComposing === false) {
+    if (
+      e.key === "Enter" &&
+      inputValue.length > 0 &&
+      e.nativeEvent.isComposing === false
+    ) {
       e.preventDefault();
       onAdd(inputValue);
       setInputValue("");
@@ -31,8 +34,7 @@ const InputContainer = ({ id, placeholder, onAdd, disabled }: Props) => {
 
   return (
     <Wrapper>
-      {inputValue.length > 0 &&
-        <XCircleContainer onXButton={handleXButton}/>}
+      {inputValue.length > 0 && <XCircleContainer onXButton={handleXButton} />}
       <Input
         id={id}
         placeholder={placeholder}
@@ -42,8 +44,7 @@ const InputContainer = ({ id, placeholder, onAdd, disabled }: Props) => {
         disabled={disabled}
       />
     </Wrapper>
-  )
-}
+  );
+};
 
 export default InputContainer;
-

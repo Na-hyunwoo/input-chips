@@ -4,10 +4,10 @@ export const Wrapper = styled.button<{ background?: string }>`
   display: flex;
   align-items: center;
 
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   padding: 4px 12px;
-  border: 1px solid #D1D7ED;
+  border: 1px solid #d1d7ed;
   border-radius: 30px;
   gap: 4px;
 
@@ -17,7 +17,7 @@ export const Wrapper = styled.button<{ background?: string }>`
   white-space: nowrap;
 
   &:hover {
-    background-color: ${({background}) => background};
+    background-color: ${({ background }) => background};
   }
 `;
 

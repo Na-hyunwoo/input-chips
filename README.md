@@ -1,6 +1,9 @@
 # input-chips
+
 Contributions of any kind welcome!
+
 ## Motivation
+
 This project provides a input with chips. It is inspired by [material-ui-chip-input](https://www.npmjs.com/package/material-ui-chip-input)
 
 But this package is deprecated, and I wanted a different design.
@@ -16,12 +19,13 @@ npm i input-chips
 ```
 
 ## Point Of Focus
-- Pretty UI 
+
+- Pretty UI
 
 - Easy use
 
 - Eliminate the bug from material-ui-chip-input where Korean is entered twice
-![](https://velog.velcdn.com/images/dusdjeks/post/77db6d3b-6be7-4c3c-9ec3-8a0c5b093add/image.gif)
+  ![](https://velog.velcdn.com/images/dusdjeks/post/77db6d3b-6be7-4c3c-9ec3-8a0c5b093add/image.gif)
 
 - Improving developer experience through tsdoc and storybook
 
@@ -30,34 +34,34 @@ npm i input-chips
 ## Usage
 
 ```js
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
-      return state.includes(action.keyword) ? state : [...state, action.keyword];
+      return state.includes(action.keyword)
+        ? state
+        : [...state, action.keyword];
     case "DELETE":
       return state.filter((existing) => existing !== action.keyword);
-    default: 
+    default:
       return state;
   }
-}
+};
 
 const App = () => {
+  const [keywords, dispatch] = useReducer(reducer, []);
 
-  const [ keywords, dispatch ] = useReducer(reducer, []);
+  const handleAdd = (keyword: string) => {
+    dispatch({ type: "ADD", keyword: keyword });
+  };
 
-  const handleAdd = ( keyword: string ) => {
-    dispatch({type: "ADD", keyword: keyword});
-  }
-
-  const handleDelete = ( keyword: string ) => {
-    dispatch({type: "DELETE", keyword: keyword});
-  }
+  const handleDelete = (keyword: string) => {
+    dispatch({ type: "DELETE", keyword: keyword });
+  };
 
   return (
-    <InputChips 
+    <InputChips
       id={id}
-      title={title} 
+      title={title}
       tip={tip}
       placeholder={inputChips.placeholder}
       keywords={keywords}
@@ -65,32 +69,31 @@ const App = () => {
       onAdd={handleAdd}
     />
   );
-}
+};
 
 export default App;
-
 ```
 
 ## Result
 
 ![](https://velog.velcdn.com/images/dusdjeks/post/4d2bf199-0679-4e01-8a36-7f08960d65f9/image.gif)
 
-
 ## Properties
-|Name|Type|Default|Description|
-|---|---|---|---|
-|id|`string`||String key for input-label coupling
-|title|`string`||Enter your input label
-|tip|`string`||Enter tip for using input. It's located next to title.
-|placeholder|`string`||Enter the placeholder showed by input
-|keywords|`string[]`||It will return pretty chips
-|onAdd|`function(arg0: string)`||This will send you a keyword, so you should manage it using hook like useState.
-|onDelete|`function(arg0: string)`||This will send you a keyword, so you should manage it using hook like useState.
-|disabled|`boolean`||True if you want to make disable input
-|maxLength|`number`||It defines the maximum number of characters
-|minLength|`number`||It defines the minimum number of characters
-|name|`string`||A string specifying a name for the input control.
-|readonly|`boolean`||A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input.
-|required|`boolean`||Required is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
-|border|`string`||You can customize your input border. 
-|background|`string`||You can customize your input background and chip background. 
+
+| Name        | Type                     | Default | Description                                                                                                                                            |
+| ----------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id          | `string`                 |         | String key for input-label coupling                                                                                                                    |
+| title       | `string`                 |         | Enter your input label                                                                                                                                 |
+| tip         | `string`                 |         | Enter tip for using input. It's located next to title.                                                                                                 |
+| placeholder | `string`                 |         | Enter the placeholder showed by input                                                                                                                  |
+| keywords    | `string[]`               |         | It will return pretty chips                                                                                                                            |
+| onAdd       | `function(arg0: string)` |         | This will send you a keyword, so you should manage it using hook like useState.                                                                        |
+| onDelete    | `function(arg0: string)` |         | This will send you a keyword, so you should manage it using hook like useState.                                                                        |
+| disabled    | `boolean`                |         | True if you want to make disable input                                                                                                                 |
+| maxLength   | `number`                 |         | It defines the maximum number of characters                                                                                                            |
+| minLength   | `number`                 |         | It defines the minimum number of characters                                                                                                            |
+| name        | `string`                 |         | A string specifying a name for the input control.                                                                                                      |
+| readonly    | `boolean`                |         | A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input.                                      |
+| required    | `boolean`                |         | Required is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. |
+| border      | `string`                 |         | You can customize your input border.                                                                                                                   |
+| background  | `string`                 |         | You can customize your input background and chip background.                                                                                           |

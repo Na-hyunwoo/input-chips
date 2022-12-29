@@ -3,19 +3,19 @@ import { FormEvent, KeyboardEvent } from "react";
 import styled from "styled-components";
 
 interface InputProps {
-  id: string,
-  placeholder?: string,
-  value: string,
-  onChange(arg0: FormEvent<HTMLInputElement>): void,
-  onKeyDownCapture(arg0: KeyboardEvent<HTMLInputElement>): void,
-  disabled?: boolean,
-  maxLength?: number,
-  minLength?: number, 
-  name?: string,
-  readOnly?: boolean, 
-  required?: boolean,
-  background?: string,
-  border?: string,
+  id: string;
+  placeholder?: string;
+  value: string;
+  onChange(arg0: FormEvent<HTMLInputElement>): void;
+  onKeyDownCapture(arg0: KeyboardEvent<HTMLInputElement>): void;
+  disabled?: boolean;
+  maxLength?: number;
+  minLength?: number;
+  name?: string;
+  readOnly?: boolean;
+  required?: boolean;
+  background?: string;
+  border?: string;
 }
 
 export const Wrapper = styled.div`
@@ -23,9 +23,9 @@ export const Wrapper = styled.div`
 
   width: 100%;
 `;
- 
+
 export const Input = styled.input<InputProps>`
-  background: ${({background}) => background};
+  background: ${({ background }) => background};
 
   border-radius: 8px;
   width: 100%;
@@ -35,17 +35,17 @@ export const Input = styled.input<InputProps>`
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
-  color: #3B3F4E;
+  color: #3b3f4e;
 
   border: 0;
   outline: 0;
 
   &::placeholder {
-    color: #C4C9D7;
+    color: #c4c9d7;
   }
 
   &:focus {
     padding: 7px 15px;
-    border: ${({border}) => border && `1px solid ${border}`};
+    border: ${({ border }) => border && `1px solid ${border}`};
   }
 `;

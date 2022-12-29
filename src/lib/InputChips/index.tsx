@@ -1,23 +1,27 @@
 import { createContext } from "react";
-import { TitleContainer, ChipContainer, InputContainer } from "../../containers";
+import {
+  TitleContainer,
+  ChipContainer,
+  InputContainer,
+} from "../../containers";
 import { Wrapper } from "./styled";
 
 interface Props {
-  id: string,
-  title?: string,
-  keywords: Array<string>,
-  placeholder?: string,
-  tip?: string,
-  onAdd: (arg0: string) => void,
-  onDelete: (arg0: string) => void,
-  disabled?: boolean
-  maxLength?: number, 
-  minLength?: number, 
-  name?: string, 
-  readonly?: boolean, 
-  required?: boolean,
-  background?: string,
-  border?: string,
+  id: string;
+  title?: string;
+  keywords: Array<string>;
+  placeholder?: string;
+  tip?: string;
+  onAdd: (arg0: string) => void;
+  onDelete: (arg0: string) => void;
+  disabled?: boolean;
+  maxLength?: number;
+  minLength?: number;
+  name?: string;
+  readonly?: boolean;
+  required?: boolean;
+  background?: string;
+  border?: string;
 }
 
 /**
@@ -63,9 +67,40 @@ interface Props {
   );
  * ```
  */
-export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, maxLength, minLength, name, readonly, required, background = "#F2F7FF", border = "#3784F6" }: Props) => {
-
-  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, maxLength, minLength, name, readonly, required, background, border };
+export const InputChips = ({
+  id,
+  title,
+  keywords = [],
+  placeholder,
+  tip,
+  onAdd,
+  onDelete,
+  disabled = false,
+  maxLength,
+  minLength,
+  name,
+  readonly,
+  required,
+  background = "#F2F7FF",
+  border = "#3784F6",
+}: Props) => {
+  const contextValue = {
+    id,
+    title,
+    keywords,
+    placeholder,
+    tip,
+    onAdd,
+    onDelete,
+    disabled,
+    maxLength,
+    minLength,
+    name,
+    readonly,
+    required,
+    background,
+    border,
+  };
 
   return (
     <Context.Provider value={contextValue}>
@@ -76,7 +111,7 @@ export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, 
       </Wrapper>
     </Context.Provider>
   );
-}
+};
 
 export const ContextValue = createContext<Props>({
   id: "",
@@ -89,8 +124,4 @@ export const ContextValue = createContext<Props>({
   disabled: false,
   background: "",
   border: "",
-})
-
-
-
-
+});

@@ -3,7 +3,6 @@ import { ContextValue } from "../../lib/InputChips";
 import { Wrapper, Title, Tip } from "./styled";
 
 const TitleContainer = () => {
-
   const { id, title, tip } = useContext(ContextValue);
 
   return (
@@ -12,7 +11,6 @@ const TitleContainer = () => {
       <Tip>{tip ? `※ ${tip}` : ""}</Tip>
     </Wrapper>
   );
-}
+};
 
 export default TitleContainer;
-

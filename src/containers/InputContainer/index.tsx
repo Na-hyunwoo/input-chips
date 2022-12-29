@@ -3,10 +3,20 @@ import { XCircleContainer } from "..";
 import { ContextValue } from "../../lib/InputChips";
 import { Wrapper, Input } from "./styled";
 
-
 const InputContainer = () => {
-
-  const { id, placeholder, onAdd, disabled, maxLength, minLength, name, readonly, required, background, border } = useContext(ContextValue);
+  const {
+    id,
+    placeholder,
+    onAdd,
+    disabled,
+    maxLength,
+    minLength,
+    name,
+    readonly,
+    required,
+    background,
+    border,
+  } = useContext(ContextValue);
 
   const [inputValue, setInputValue] = useState("");
 
@@ -15,7 +25,11 @@ const InputContainer = () => {
   };
 
   const handleEnterKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && inputValue.length > 0 && e.nativeEvent.isComposing === false) {
+    if (
+      e.key === "Enter" &&
+      inputValue.length > 0 &&
+      e.nativeEvent.isComposing === false
+    ) {
       e.preventDefault();
       onAdd(inputValue);
       setInputValue("");
@@ -28,8 +42,7 @@ const InputContainer = () => {
 
   return (
     <Wrapper>
-      {inputValue.length > 0 &&
-        <XCircleContainer onXButton={handleXButton}/>}
+      {inputValue.length > 0 && <XCircleContainer onXButton={handleXButton} />}
       <Input
         id={id}
         placeholder={placeholder}
@@ -46,10 +59,7 @@ const InputContainer = () => {
         border={border}
       />
     </Wrapper>
-  )
-}
+  );
+};
 
 export default InputContainer;
-
-
-
