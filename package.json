@@ -7,7 +7,7 @@
     "react",
     "component"
   ],
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main": "dist/lib/InputChips.js",
   "types": "dist/lib/InputChips.d.ts",

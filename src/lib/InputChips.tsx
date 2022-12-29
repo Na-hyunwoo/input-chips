@@ -64,7 +64,7 @@ interface Props {
   );
  * ```
  */
-export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, autoFocus, maxLength, minLength, name, readonly, required, background, border }: Props) => {
+export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, autoFocus, maxLength, minLength, name, readonly, required, background = "#F2F7FF", border = "#3784F6" }: Props) => {
 
   const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required, background, border };
 
@@ -88,8 +88,8 @@ export const Context = createContext<Props>({
   onAdd: () => {},
   onDelete: () => {},
   disabled: false,
-  background: `#F2F7FF`,
-  border: `#3784F6`,
+  background: "",
+  border: "",
 })
 
 const Wrapper = styled.div`
