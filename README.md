@@ -34,6 +34,9 @@ npm i input-chips
 ## Usage
 
 ```js
+import { InputChips } from "input-chips";
+import React, { useReducer } from 'react';
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
