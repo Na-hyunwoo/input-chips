@@ -3,7 +3,7 @@ import {
   Wrapper,
   Title as TitleLabel,
   Tip,
-} from "../containers/TitleContainer/styled";
+} from "../lib/containers/TitleContainer/styled";
 
 export interface Props {
   id?: string;

@@ -21,4 +21,5 @@ export const DisabledInput = Template.bind({});
 DisabledInput.args = {
   id: "DisabledInput",
   disabled: true,
+  placeholder: "Cookies I made and baked for you",
 };

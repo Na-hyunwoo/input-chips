@@ -1,6 +1,6 @@
 import React from "react";
 import Chip from "./Chip";
-import { Wrapper } from "../containers/ChipContainer/styled";
+import { Wrapper } from "../lib/containers/ChipContainer/styled";
 
 export interface Props {
   keywords: string[];
