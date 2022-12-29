@@ -1,6 +1,5 @@
-import React from "react";
+import React, { FormEvent, KeyboardEvent, useState } from "react";
 import styled from "styled-components";
-import { FormEvent, KeyboardEvent, useState } from "react";
 import { XCircleContainer } from "../containers";
 
 interface Props {
