@@ -1,6 +1,7 @@
-import styled from "styled-components";
 import { createContext } from "react";
-import { TitleContainer, ChipContainer, InputContainer } from "../containers";
+import { TitleContainer, ChipContainer, InputContainer } from "../../containers";
+import { Wrapper } from "./styled";
+
 interface Props {
   id: string,
   title?: string,
@@ -10,7 +11,6 @@ interface Props {
   onAdd: (arg0: string) => void,
   onDelete: (arg0: string) => void,
   disabled?: boolean
-  autoFocus?: boolean, 
   maxLength?: number, 
   minLength?: number, 
   name?: string, 
@@ -29,7 +29,6 @@ interface Props {
  * @param {function props.onAdd(arg0: string) : void} props.onAdd this will send you a keyword, so you should manage it using hook like useState.
  * @param {function props.onDelete(arg0: string) : void} props.onDeletethis this will send you a keyword, so you should manage it using hook like useState.
  * @param {boolean} props.disabled true if you want to make disable input
- * @param {boolean} props.autoFocus
  * @param {number} props.maxLength
  * @param {number} props.minLength
  * @param {string} props.name
@@ -64,9 +63,9 @@ interface Props {
   );
  * ```
  */
-export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, autoFocus, maxLength, minLength, name, readonly, required, background = "#F2F7FF", border = "#3784F6" }: Props) => {
+export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, onDelete, disabled = false, maxLength, minLength, name, readonly, required, background = "#F2F7FF", border = "#3784F6" }: Props) => {
 
-  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required, background, border };
+  const contextValue = { id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, maxLength, minLength, name, readonly, required, background, border };
 
   return (
     <Context.Provider value={contextValue}>
@@ -79,7 +78,7 @@ export const InputChips = ({ id, title, keywords = [], placeholder, tip, onAdd, 
   );
 }
 
-export const Context = createContext<Props>({
+export const ContextValue = createContext<Props>({
   id: "",
   title: "",
   keywords: [""],
@@ -92,15 +91,6 @@ export const Context = createContext<Props>({
   border: "",
 })
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 
-  position: relative;
-  gap: 16px;
-  width: 100%;
-`;
 
 

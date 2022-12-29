@@ -8,7 +8,6 @@ interface Props {
     onAdd: (arg0: string) => void;
     onDelete: (arg0: string) => void;
     disabled?: boolean;
-    autoFocus?: boolean;
     maxLength?: number;
     minLength?: number;
     name?: string;
@@ -26,7 +25,6 @@ interface Props {
  * @param {function props.onAdd(arg0: string) : void} props.onAdd this will send you a keyword, so you should manage it using hook like useState.
  * @param {function props.onDelete(arg0: string) : void} props.onDeletethis this will send you a keyword, so you should manage it using hook like useState.
  * @param {boolean} props.disabled true if you want to make disable input
- * @param {boolean} props.autoFocus
  * @param {number} props.maxLength
  * @param {number} props.minLength
  * @param {string} props.name
@@ -61,6 +59,6 @@ interface Props {
   );
  * ```
  */
-export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, autoFocus, maxLength, minLength, name, readonly, required, background, border }: Props) => JSX.Element;
+export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, maxLength, minLength, name, readonly, required, background, border }: Props) => JSX.Element;
 export declare const Context: import("react").Context<Props>;
 export {};

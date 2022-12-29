@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import XCircle from "../assets/icons/XCircle";
+import XCircle from "../../assets/icons/XCircle";
+import { Wrapper } from "./styled";
 
 interface Props {
   onXButton: () => void,
@@ -18,10 +18,3 @@ const XCircleContainer = (props: Props) => {
 
 export default XCircleContainer;
 
-const Wrapper = styled.div`
-  position: absolute;
-  right: 10px;
-  top: 13px;
-
-  cursor: pointer;
-`;

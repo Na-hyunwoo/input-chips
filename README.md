@@ -87,7 +87,6 @@ export default App;
 |onAdd|`function(arg0: string)`||This will send you a keyword, so you should manage it using hook like useState.
 |onDelete|`function(arg0: string)`||This will send you a keyword, so you should manage it using hook like useState.
 |disabled|`boolean`||True if you want to make disable input
-|autoFocus|`bool`||A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading
 |maxLength|`number`||It defines the maximum number of characters
 |minLength|`number`||It defines the minimum number of characters
 |name|`string`||A string specifying a name for the input control.

@@ -27,6 +27,7 @@
     "url": "git+https://github.com/Na-hyunwoo/input-chips.git"
   },
   "dependencies": {
+    "@storybook/react": "^6.5.15",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -89,7 +90,6 @@
     "@storybook/manager-webpack5": "^6.5.14",
     "@storybook/node-logger": "^6.5.14",
     "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.14",
     "@storybook/testing-library": "^0.0.13",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
