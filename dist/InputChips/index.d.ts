@@ -1,21 +1,6 @@
 /// <reference types="react" />
-interface Props {
-    id: string;
-    title?: string;
-    keywords: Array<string>;
-    placeholder?: string;
-    tip?: string;
-    onAdd: (arg0: string) => void;
-    onDelete: (arg0: string) => void;
-    disabled?: boolean;
-    maxLength?: number;
-    minLength?: number;
-    name?: string;
-    readonly?: boolean;
-    required?: boolean;
-    background?: string;
-    border?: string;
-}
+import { Props } from "./type";
+export declare const Context: import("react").Context<Props>;
 /**
  * @param {string} props.id string key for input-label coupling
  * @param {string} props.title enter your input label
@@ -59,6 +44,4 @@ interface Props {
   );
  * ```
  */
-export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, maxLength, minLength, name, readonly, required, background, border }: Props) => JSX.Element;
-export declare const Context: import("react").Context<Props>;
-export {};
+export declare const InputChips: ({ id, title, keywords, placeholder, tip, onAdd, onDelete, disabled, maxLength, minLength, name, readonly, required, background, border, }: Props) => JSX.Element;

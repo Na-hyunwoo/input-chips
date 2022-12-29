@@ -1,7 +1,3 @@
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -14,9 +10,21 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import styled from "styled-components";
 import { createContext } from "react";
-import { TitleContainer, ChipContainer, InputContainer } from "../containers";
+import { TitleContainer, ChipContainer, InputContainer, } from "../containers";
+import { Wrapper } from "./styled";
+export var Context = createContext({
+    id: "",
+    title: "",
+    keywords: [""],
+    placeholder: "",
+    tip: "",
+    onAdd: function () { },
+    onDelete: function () { },
+    disabled: false,
+    background: "",
+    border: "",
+});
 /**
  * @param {string} props.id string key for input-label coupling
  * @param {string} props.title enter your input label
@@ -61,21 +69,23 @@ import { TitleContainer, ChipContainer, InputContainer } from "../containers";
  * ```
  */
 export var InputChips = function (_a) {
-    var id = _a.id, title = _a.title, _b = _a.keywords, keywords = _b === void 0 ? [] : _b, placeholder = _a.placeholder, tip = _a.tip, onAdd = _a.onAdd, onDelete = _a.onDelete, _c = _a.disabled, disabled = _c === void 0 ? false : _c, autoFocus = _a.autoFocus, maxLength = _a.maxLength, minLength = _a.minLength, name = _a.name, readonly = _a.readonly, required = _a.required, _d = _a.background, background = _d === void 0 ? "#F2F7FF" : _d, _e = _a.border, border = _e === void 0 ? "#3784F6" : _e;
-    var contextValue = { id: id, title: title, keywords: keywords, placeholder: placeholder, tip: tip, onAdd: onAdd, onDelete: onDelete, disabled: disabled, autoFocus: autoFocus, maxLength: maxLength, minLength: minLength, name: name, readonly: readonly, required: required, background: background, border: border };
+    var id = _a.id, title = _a.title, _b = _a.keywords, keywords = _b === void 0 ? [] : _b, placeholder = _a.placeholder, tip = _a.tip, onAdd = _a.onAdd, onDelete = _a.onDelete, _c = _a.disabled, disabled = _c === void 0 ? false : _c, maxLength = _a.maxLength, minLength = _a.minLength, name = _a.name, readonly = _a.readonly, required = _a.required, _d = _a.background, background = _d === void 0 ? "#F2F7FF" : _d, _e = _a.border, border = _e === void 0 ? "#3784F6" : _e;
+    var contextValue = {
+        id: id,
+        title: title,
+        keywords: keywords,
+        placeholder: placeholder,
+        tip: tip,
+        onAdd: onAdd,
+        onDelete: onDelete,
+        disabled: disabled,
+        maxLength: maxLength,
+        minLength: minLength,
+        name: name,
+        readonly: readonly,
+        required: required,
+        background: background,
+        border: border,
+    };
     return (_jsx(Context.Provider, __assign({ value: contextValue }, { children: _jsxs(Wrapper, { children: [_jsx(TitleContainer, {}), _jsx(InputContainer, {}), _jsx(ChipContainer, {})] }) })));
 };
-export var Context = createContext({
-    id: "",
-    title: "",
-    keywords: [""],
-    placeholder: "",
-    tip: "",
-    onAdd: function () { },
-    onDelete: function () { },
-    disabled: false,
-    background: "",
-    border: "",
-});
-var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n\n  position: relative;\n  gap: 16px;\n  width: 100%;\n"], ["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n\n  position: relative;\n  gap: 16px;\n  width: 100%;\n"])));
-var templateObject_1;

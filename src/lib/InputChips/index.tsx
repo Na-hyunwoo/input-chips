@@ -3,26 +3,22 @@ import {
   TitleContainer,
   ChipContainer,
   InputContainer,
-} from "../../containers";
+} from "../containers";
 import { Wrapper } from "./styled";
+import { Props } from "./type";
 
-interface Props {
-  id: string;
-  title?: string;
-  keywords: Array<string>;
-  placeholder?: string;
-  tip?: string;
-  onAdd: (arg0: string) => void;
-  onDelete: (arg0: string) => void;
-  disabled?: boolean;
-  maxLength?: number;
-  minLength?: number;
-  name?: string;
-  readonly?: boolean;
-  required?: boolean;
-  background?: string;
-  border?: string;
-}
+export const Context = createContext<Props>({
+  id: "",
+  title: "",
+  keywords: [""],
+  placeholder: "",
+  tip: "",
+  onAdd: () => {},
+  onDelete: () => {},
+  disabled: false,
+  background: "",
+  border: "",
+});
 
 /**
  * @param {string} props.id string key for input-label coupling
@@ -113,15 +109,4 @@ export const InputChips = ({
   );
 };
 
-export const ContextValue = createContext<Props>({
-  id: "",
-  title: "",
-  keywords: [""],
-  placeholder: "",
-  tip: "",
-  onAdd: () => {},
-  onDelete: () => {},
-  disabled: false,
-  background: "",
-  border: "",
-});
+

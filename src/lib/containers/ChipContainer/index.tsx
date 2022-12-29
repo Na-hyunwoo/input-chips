@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Chip } from "../../components";
-import { Context } from "../../lib/InputChips";
+import { Context } from "../../InputChips";
 import { Wrapper } from "./styled";
 
 const ChipContainer = () => {

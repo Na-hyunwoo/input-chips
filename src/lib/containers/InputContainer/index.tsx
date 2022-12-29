@@ -1,6 +1,6 @@
 import { FormEvent, KeyboardEvent, useContext, useState } from "react";
 import { XCircleContainer } from "..";
-import { Context } from "../../lib/InputChips";
+import { Context } from "../../InputChips";
 import { Wrapper, Input } from "./styled";
 
 const InputContainer = () => {
